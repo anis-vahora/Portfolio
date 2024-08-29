@@ -1,21 +1,10 @@
 html {
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
-  );
-
-  --image-gradient: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
-  );
-
-  --imp-text-color: #c770f0;
+    --imp-text-color: #B650F0
 }
 
+
 .purple {
-  color: var(--imp-text-color) !important;
+  color: #00bcd4;
 }
 
 button:focus {
@@ -52,23 +41,23 @@ button:focus {
 /* --------- */
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 9.5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d1950;
+  background: #1E1E1E;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: rgba(84, 83, 84, 0.959);
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
+  background: rgba(84, 83, 84, 0.959);
   border-radius: 12px;
 }
 
@@ -76,9 +65,9 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #1b1a2ea9 !important;
+  background-color: #1D232A !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  box-shadow: 0px 10px 10px 0px #24303e !important;
   backdrop-filter: blur(15px) !important;
 }
 
@@ -194,7 +183,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: radial-gradient( at left, rgb(1, 110, 218), rgb(217, 0, 192));
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -252,11 +241,11 @@ button:focus {
 
 .home-header {
   padding-top: 80px !important;
-}
+} 
 
 .home-section {
   position: relative;
-  z-index: -1;
+  /* z-index: -1; */
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -281,17 +270,23 @@ button:focus {
 }
 
 .main-name {
-  color: #cd5ff8;
+  background: linear-gradient(to right, #30CFD0, #c43ad6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #be6adf !important;
+  background: linear-gradient(to right, #30CFD0, #c43ad6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #b562d6 !important;
+  background: linear-gradient(to right, #30CFD0, #c43ad6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 767px) {
@@ -307,7 +302,7 @@ button:focus {
 
 .myAvtar {
   justify-content: center !important;
-  padding-top: 9em !important;
+  padding-top: 7em !important;
 }
 
 @media (max-width: 767px) {
@@ -371,7 +366,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #68187a;
+  background: #5e58ba;
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -379,13 +374,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #801f95;
+  box-shadow: 0 0 15px #B650F0;
 }
 
 .home-social-icons:hover {
-  color: #87209e;
-  box-shadow: 0 0 5px #87209e;
-  text-shadow: 0 0 2px #87209e;
+  color: #5e58ba;
+  box-shadow: 0 0 5px #5e58ba;
+  text-shadow: 0 0 2px #5e58ba;
 }
 
 .social-icons {
@@ -395,14 +390,16 @@ button:focus {
 }
 
 .icon-colour {
-  color: #700c86 !important;
+  color: #1e1e1e !important;
 }
 
 /* --------- */
 /* Footer */
 /* --------- */
 .footer {
-  background-color: rgb(10, 4, 22);
+  position: fixed;
+  background-color: #121922; 
+  
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -428,7 +425,7 @@ button:focus {
 
 .footer h3 {
   font-size: 1em;
-  color: white !important;
+  color: #b0b3b8 !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
@@ -436,10 +433,11 @@ button:focus {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
   padding: 0 !important;
+  color: #b0b3b8;
 }
 
 .blockquote-footer {
-  color: #a588c0 !important;
+  color: #b0b3b8 !important;
 }
 /* --------- */
 /* Projects */
@@ -460,8 +458,8 @@ button:focus {
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
-  color: white !important;
+  box-shadow: 0 4px 5px 3px rgb(22, 134, 149) !important;
+  color: #FAFAFA !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
@@ -470,7 +468,7 @@ button:focus {
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  box-shadow: 0 4px 4px 5px rgb(0,188,212) !important;
 }
 
 .blog-card {

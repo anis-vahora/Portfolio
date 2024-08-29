@@ -2,89 +2,110 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
+
 import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import hifinite from "../../Assets/Projects/hifinite.png";
+import lytikal from "../../Assets/Projects/lytikal.png";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
+      {/* <Particle /> */}
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My Work <strong className="purple">Experience </strong>
         </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+          <Card className="project-card-view" style={{borderRadius:'20px' }}>
+              <Card.Img
+               style={{borderRadius:'25px', maxWidth: "250", maxHeight: "200px", objectFit:'cover' }}
+                variant="top"
+                src={hifinite}
+                alt="card-img"
+              />
+              <Card.Body>
+                <Card.Title>Hifinite Health</Card.Title>
+                <div
+                  style={{
+                    textAlign: "left",
+                    paddingTop: "10px",
+                  }}
+                >
+                  <p>
+                    <li>
+                    When I joined Hifinite Health as a Software Developer, I dove into a dynamic environment where innovation was the norm. My initial focus was on <b className="purple">designing and implementing advanced healthcare features</b> that transformed patient interactions.
+                     Imagine a system where user engagement surged by 42%—that’s what we achieved by blending cutting-edge machine learning models with a thoughtful design.
+                    </li>
+                    <li>
+                    In the heart of the project, I tackled the integration of <b className="purple">varied patient data sources</b>. This wasn’t just about connecting systems; it was about crafting a solution that improved data accuracy by 18%, paving the way for better patient care and smoother operations across departments.
+                    </li>
+                    <li>
+                    One of my proudest accomplishments was developing and integrating real-time <b className="purple">AWS QuickSight dashboards</b>. These dashboards didn’t just display data; they empowered decision-makers with timely insights that boosted revenue by 23% and significantly impacted patient health outcomes.
+                    </li>
+                    <li>
+                    My role also involved <b className="purple">architecting and optimizing data warehousing solutions</b> with Java, PostgreSQL, and AWS Redshift.  This effort was pivotal in speeding up data retrieval and supporting robust analytics.
+                    </li>
+                    <li>
+                    Collaboration was at the core of our success. By working closely with cross-functional teams, we streamlined workflows and cut delivery times, while my commitment to code quality reduced production bugs and enhanced system reliability.
+                    </li>
+                    
+                  </p>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={4} className="project-card">
+            <Card className="project-card-view" style={{borderRadius:'20px' }}>
+              <Card.Img
+               style={{borderRadius:'25px', maxWidth: "250", maxHeight: "200px", objectFit:'cover' }}
+                variant="top"
+                src={lytikal}
+                alt="card-img"
+              />
+              <Card.Body>
+                <Card.Title>Lytikal Insights</Card.Title>
+                <div
+                  style={{
+                    textAlign: "left",
+                    paddingTop: "10px",
+                  }}
+                >
+                  <ul>
+                    <li>
+                    Starting at Lytikal Insights, I embraced the challenge of enhancing stock market analysis through <b className="purple">Trading View integration</b>. This wasn’t just about adding features; it was about revolutionizing how users engaged with their investments, ultimately laying the groundwork for an improved investment strategy.
+                    </li>
+                    <li>
+                    During my time, I focused on <b className="purple">developing portfolio management features and watchlists</b>, which dramatically improved user experience. By streamlining API data fetching using Python and Flask, we achieved a 25% reduction in latency, making data retrieval faster and more efficient.
+                    </li>
+                    <li>
+                    An essential part of my role was <b className="purple">creating and configuring Docker containers</b> for modular components. This innovation simplified our development process, making it easier to integrate new features and enhance our deployment workflows.
+                    </li>
+                    <li>
+                    Through daily stand-ups and sprint planning, I contributed to fostering a collaborative team environment, ensuring we met our goals and delivered a reliable product.
+                    </li>
+                  </ul>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+        <h1 className="project-heading">
+          My Recent <strong className="purple">Project </strong>
+        </h1>
+
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Project: OpenSwap"
+              description="OpenSwap is a cutting-edge decentralized exchange (DEX) designed to provide users with a seamless and secure platform for swapping tokens and participating in liquidity provision. Built on the principles of decentralization and user empowerment, OpenSwap offers a revolutionary way for individuals to engage in cryptocurrency trading without the need for intermediaries."
+              ghLink=""
+              demoLink="https://t.co/5dbJuXyGLI"
             />
           </Col>
         </Row>
